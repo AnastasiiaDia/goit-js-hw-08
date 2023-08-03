@@ -13,7 +13,7 @@ vimeoPlayer.on(
 window.addEventListener(
   'load',
   vimeoPlayer
-    .setCurrentTime(localStorage.getItem('videoplayer-current-time'))
+    .setCurrentTime(localStorage.getItem('videoplayer-current-time') || 0)
     .then(function (seconds) {
       console.log(`${seconds} = the actual time that the player seeked to`);
     })
